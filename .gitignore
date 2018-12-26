@@ -1,3 +1,5 @@
 SqlServerAdoSession/SqlConAdo/obj/
 SqlServerAdoSession/SqlConAdo/bin/
 .vs/
+DataAccessLayer/DAL/bin/
+DataAccessLayer/DAL/obj/
