@@ -13,7 +13,12 @@ namespace SqlConAdo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var records = Sql.FetchRecords();
+            // sql server fetch records
+            // var records = Sql.FetchRecords(); 
+
+            // Ms Access fetch records
+            var records = MsAccessDbRepository.FetchUsers();
+
             foreach (var record in records)
             {
                 MessageBox.Show(record);
