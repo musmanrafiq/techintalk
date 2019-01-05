@@ -3,3 +3,5 @@ SqlServerAdoSession/SqlConAdo/bin/
 .vs/
 DataAccessLayer/DAL/bin/
 DataAccessLayer/DAL/obj/
+RoughWork/Console/bin/
+RoughWork/Console/obj/

@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlConAdo", "SqlServerAdoSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DataAccessLayer\DAL\DAL.csproj", "{02FA37C3-DF18-4646-B019-ABED9074722B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RoughWork", "RoughWork", "{D31A63F3-8E6A-45E8-A5B2-E51D4CBBCFCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "RoughWork\Console\Console.csproj", "{D0ACB916-7971-4EAB-B1D6-F69E55200AC0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +25,16 @@ Global
 		{02FA37C3-DF18-4646-B019-ABED9074722B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02FA37C3-DF18-4646-B019-ABED9074722B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02FA37C3-DF18-4646-B019-ABED9074722B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0ACB916-7971-4EAB-B1D6-F69E55200AC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0ACB916-7971-4EAB-B1D6-F69E55200AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0ACB916-7971-4EAB-B1D6-F69E55200AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0ACB916-7971-4EAB-B1D6-F69E55200AC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D0ACB916-7971-4EAB-B1D6-F69E55200AC0} = {D31A63F3-8E6A-45E8-A5B2-E51D4CBBCFCF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A1BD2B9A-ADA2-4F16-A6F5-54445D9011D4}
