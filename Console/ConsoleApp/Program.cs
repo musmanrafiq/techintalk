@@ -1,116 +1,31 @@
 ﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
-    class Program
+    public class Program
     {
-
         static void Main(string[] args)
         {
-            //FirstWay();
-            //SecondWay();
-            //ThirdWay();
-            //FourthWay();
-            FifthWay();
+            // multiple value return example
+            UtilizeMultiValueReturnExample();
+
+            // to stop program from exit
             Console.ReadKey();
-        }
-
-
-        private static void FirstWay()
+        }       
+        
+        public static void UtilizeMultiValueReturnExample()
         {
-            var cancellationTokenSource = new CancellationTokenSource();
-            var token = cancellationTokenSource.Token;
+            // first way of utilizing mutiple returns from a method
+            var positionResponse = MultipleValueReturnFromMethods.GetPosition();
+            Console.WriteLine($"The position is {positionResponse.Item1} {positionResponse.Item2}");
 
-            Task.Run(() => {
-                while (!cancellationTokenSource.IsCancellationRequested)
-                {
-                    Console.WriteLine("Hello World!");
-                    Thread.Sleep(200);
-                }
-            }, token);
+            // second way of utilizing mutiple returns from a method 
+            var (postion, name) = MultipleValueReturnFromMethods.GetPosition();
+            Console.WriteLine($"The position is {postion} {name}");
 
-            cancellationTokenSource.CancelAfter(2000);
-        }
-
-        private static void SecondWay()
-        {
-            var cancellationTokenSource = new CancellationTokenSource(2000);
-            var token = cancellationTokenSource.Token;
-
-            Task.Run(() => {
-                while (!cancellationTokenSource.IsCancellationRequested)
-                {
-                    Console.WriteLine("Hello World!");
-                    Thread.Sleep(200);
-                }
-            }, token);
-       }
-
-        private static void ThirdWay()
-        {
-            var cancellationTokenSource = new CancellationTokenSource();
-            var token = cancellationTokenSource.Token;
-
-            Task.Run(() => {
-                while (true)
-                {
-                    token.ThrowIfCancellationRequested();
-                    Console.WriteLine("Hello World!");
-                    Thread.Sleep(200);
-
-                }
-            }, token);
-
-            cancellationTokenSource.CancelAfter(2000);
-        }
-
-        private static void FourthWay()
-        {
-            var cancellationTokenSource = new CancellationTokenSource();
-            var token = cancellationTokenSource.Token;
-
-            Task.Run(() => {
-                try
-                {
-                    while (true)
-                    {
-                        token.ThrowIfCancellationRequested();
-                        Console.WriteLine("Hello World!");
-                        Thread.Sleep(200);
-                    }
-                }
-                catch (Exception exp)
-                {
-
-                }
-                finally
-                {
-                    Console.WriteLine("Let's close this up guys!");
-                }
-            }, token);
-
-            cancellationTokenSource.CancelAfter(2000);
-        }
-
-        private static void FifthWay()
-        {
-            var cancellationTokenSource = new CancellationTokenSource();
-            var token = cancellationTokenSource.Token;
-
-            Task.Run(() => {
-                while (!cancellationTokenSource.IsCancellationRequested)
-                {
-                    Console.WriteLine("Hello World!");
-                    Thread.Sleep(200);
-                }
-            }, token);
-
-            cancellationTokenSource.CancelAfter(2000);
-            token.Register(() => {
-                Console.WriteLine("Register is get called!");
-            });
+            // third way of utilizing mutiple returns from a method
+            var response = MultipleValueReturnFromMethods.GetOtherPosition();
+            Console.WriteLine($"The position is {response.postion} {response.name}");            
         }
     }
 }
