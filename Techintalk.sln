@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "Console\Conso
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{3840FC52-8825-4597-9103-A1397DE0F0CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspDotNetCore", "Web\AspDotNetCore\AspDotNetCore.csproj", "{2327E862-BD4B-46C2-89DF-25A0D2C02ACB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspDotNetCore", "Web\AspDotNetCore\AspDotNetCore.csproj", "{2327E862-BD4B-46C2-89DF-25A0D2C02ACB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling", "Console\ExceptionHandling\ExceptionHandling.csproj", "{7F451B2B-7FFC-405C-A0D6-ACED3CED62A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{2327E862-BD4B-46C2-89DF-25A0D2C02ACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2327E862-BD4B-46C2-89DF-25A0D2C02ACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2327E862-BD4B-46C2-89DF-25A0D2C02ACB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F451B2B-7FFC-405C-A0D6-ACED3CED62A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F451B2B-7FFC-405C-A0D6-ACED3CED62A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F451B2B-7FFC-405C-A0D6-ACED3CED62A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F451B2B-7FFC-405C-A0D6-ACED3CED62A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{D0ACB916-7971-4EAB-B1D6-F69E55200AC0} = {D31A63F3-8E6A-45E8-A5B2-E51D4CBBCFCF}
 		{708B5489-E892-4887-8C52-8F9D546FF9E4} = {9A2135DA-D817-451F-A250-94462496F810}
 		{2327E862-BD4B-46C2-89DF-25A0D2C02ACB} = {3840FC52-8825-4597-9103-A1397DE0F0CA}
+		{7F451B2B-7FFC-405C-A0D6-ACED3CED62A6} = {9A2135DA-D817-451F-A250-94462496F810}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A1BD2B9A-ADA2-4F16-A6F5-54445D9011D4}
