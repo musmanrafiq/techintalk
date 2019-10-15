@@ -7,28 +7,17 @@ namespace ExceptionHandling
     {
         static void Main(string[] args)
         {
-            AppDomain.CurrentDomain.UnhandledException += GlobalExceptionHandler;
+            AppDomain UpdatesDomain = AppDomain.CreateDomain("Handle Updates");
+            Type UpdateInitiator = typeof(HandleUpdates);
+            UpdatesDomain.CreateInstanceAndUnwrap(UpdateInitiator.Assembly.FullName, UpdateInitiator.FullName);
+            AppDomain.Unload(UpdatesDomain);
 
-            WebClient wb = null;
-
-            try
-            {
-                wb = new WebClient();
-                string content = wb.DownloadString("https://www.youtu");
-            }
-            catch(WebException exp)
-            {
-
-            }
-            finally
-            {
-                wb.Dispose();
-            }
-
+            Console.WriteLine("Our Default Domain");
             // stop the app from closing
             Console.ReadKey();
         }
 
+       
         #region Global settings
 
         private static void GlobalExceptionHandler(object sender, UnhandledExceptionEventArgs e)
@@ -39,5 +28,19 @@ namespace ExceptionHandling
         }
 
         #endregion
+    }
+}
+
+[Serializable]
+class HandleUpdates
+{
+    public HandleUpdates()
+    {
+        Console.WriteLine("Handling updates");
+    }
+
+    ~HandleUpdates()
+    {
+        Console.WriteLine("Stoped handling updates");
     }
 }

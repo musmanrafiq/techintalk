@@ -11,3 +11,5 @@ Web/AspDotNetCore/obj/
 Web/AspDotNetCore/bin/
 Console/ExceptionHandling/bin/
 Console/ExceptionHandling/obj/
+Console/AppDomainExample/bin/
+Console/AppDomainExample/obj/
