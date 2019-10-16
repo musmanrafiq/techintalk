@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppDomainExample
 {
@@ -14,7 +10,6 @@ namespace AppDomainExample
 
         static void Main(string[] args)
         {
-
             AppDomain notificationDomain = AppDomain.CreateDomain("Its a Notification Domain");
             Type notificationType = typeof(NotificationManager);
             notificationDomain.CreateInstanceAndUnwrap(notificationType.Assembly.FullName, notificationType.FullName);
