@@ -50,5 +50,15 @@ namespace ImageListDemo
                 index += 1;
             }
         }
+
+        private void imageList_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            if (imageList.SelectedIndices.Count > 0)
+            {
+                var selectedIndex = imageList.SelectedIndices[0];
+                Image selectedImg = LoadedImages[selectedIndex];
+                selectedImage.Image = selectedImg;
+            }
+        }
     }
 }

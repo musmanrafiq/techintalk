@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.imageList = new System.Windows.Forms.ListView();
             this.selectedImage = new System.Windows.Forms.PictureBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.selectedImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,6 +43,7 @@
             this.imageList.Size = new System.Drawing.Size(170, 426);
             this.imageList.TabIndex = 0;
             this.imageList.UseCompatibleStateImageBehavior = false;
+            this.imageList.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.imageList_ItemSelectionChanged);
             // 
             // selectedImage
             // 
@@ -50,6 +53,12 @@
             this.selectedImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.selectedImage.TabIndex = 1;
             this.selectedImage.TabStop = false;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // Form1
             // 
@@ -70,6 +79,7 @@
 
         private System.Windows.Forms.ListView imageList;
         private System.Windows.Forms.PictureBox selectedImage;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 
