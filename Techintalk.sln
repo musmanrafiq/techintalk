@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WindowForms", "WindowForms"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "WindowForms\Calculator\Calculator.csproj", "{6D15473E-7BB8-41DC-B547-476A3AB6BAD9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageListDemo", "WindowForms\ImageList\ImageListDemo\ImageListDemo.csproj", "{C24DDA88-0C3A-4C79-BC29-53D53BA90E89}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +67,10 @@ Global
 		{6D15473E-7BB8-41DC-B547-476A3AB6BAD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D15473E-7BB8-41DC-B547-476A3AB6BAD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D15473E-7BB8-41DC-B547-476A3AB6BAD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C24DDA88-0C3A-4C79-BC29-53D53BA90E89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C24DDA88-0C3A-4C79-BC29-53D53BA90E89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C24DDA88-0C3A-4C79-BC29-53D53BA90E89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C24DDA88-0C3A-4C79-BC29-53D53BA90E89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +82,7 @@ Global
 		{7F451B2B-7FFC-405C-A0D6-ACED3CED62A6} = {9A2135DA-D817-451F-A250-94462496F810}
 		{7FFA3737-1CE0-4B83-84A4-D29AD2AF8E43} = {9A2135DA-D817-451F-A250-94462496F810}
 		{6D15473E-7BB8-41DC-B547-476A3AB6BAD9} = {070521B2-F261-40B1-B0CD-95A852F0DC50}
+		{C24DDA88-0C3A-4C79-BC29-53D53BA90E89} = {070521B2-F261-40B1-B0CD-95A852F0DC50}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A1BD2B9A-ADA2-4F16-A6F5-54445D9011D4}
