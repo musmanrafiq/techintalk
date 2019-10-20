@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace ImageListDemo
 {
     public partial class Form1 : Form
     {
+        // selected image index, from the listview
+        private int SelectedImageIndex = 0;
         private List<Image> LoadedImages { get; set; }
 
         public Form1()
@@ -14,40 +17,13 @@ namespace ImageListDemo
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // loading images from folder
-            LoadImagesFromFolder();
-
-            // initializing images list
-            ImageList images = new ImageList();
-            images.ImageSize = new Size(130, 40);
-
-
-            foreach(var image in LoadedImages)
-            {
-                images.Images.Add(image);
-            }
-
-            // setting our listview with the imagelist
-            imageList.LargeImageList = images;
-
-            for (int itemIndex = 1; itemIndex <= LoadedImages.Count; itemIndex++)
-            {
-                imageList.Items.Add(new ListViewItem($"Image {itemIndex}", itemIndex-1));
-            }
-        }
-
-        private void LoadImagesFromFolder()
+        private void LoadImagesFromFolder(string[] paths)
         {
             LoadedImages = new List<Image>();
-            var index = 1;
-            while(index < 10)
+            foreach(var path in paths)
             {
-                string tempLocation = $@"E:\temp\images\{index}.png";
-                var tempImage = Image.FromFile(tempLocation);
+                var tempImage = Image.FromFile(path);
                 LoadedImages.Add(tempImage);
-                index += 1;
             }
         }
 
@@ -58,6 +34,79 @@ namespace ImageListDemo
                 var selectedIndex = imageList.SelectedIndices[0];
                 Image selectedImg = LoadedImages[selectedIndex];
                 selectedImage.Image = selectedImg;
+                SelectedImageIndex = selectedIndex;
+            }
+        }
+
+        private void button_navigation(object sender, EventArgs e)
+        {
+            var clickedButton = sender as Button;
+            if (clickedButton.Text.Equals("Previous"))
+            {
+                if (SelectedImageIndex > 0)
+                {
+                    SelectedImageIndex -= 1;
+                    Image selectedImg = LoadedImages[SelectedImageIndex];
+                    selectedImage.Image = selectedImg;
+                    SelectTheClickedItem(imageList, SelectedImageIndex);
+                }
+
+            } else
+            {
+                if (SelectedImageIndex < (LoadedImages.Count - 1 ))
+                {
+                    SelectedImageIndex += 1;
+                    Image selectedImg = LoadedImages[SelectedImageIndex];
+                    selectedImage.Image = selectedImg;
+                    SelectTheClickedItem(imageList, SelectedImageIndex);
+                }
+            }
+        }
+
+        private void SelectTheClickedItem(ListView list, int index)
+        {
+            for(int item = 0; item < list.Items.Count; item++)
+            {
+                if(item == index)
+                {
+                    list.Items[item].Selected = true;
+                } else
+                {
+                    list.Items[item].Selected = false;
+                }
+            }
+            
+        }
+
+        private void selectDirectoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderBrowser = new FolderBrowserDialog();
+            if(folderBrowser.ShowDialog() == DialogResult.OK)
+            {
+                // selected directory
+                var selectedDirectory = folderBrowser.SelectedPath;
+                // images paths from selected directory
+                var imagePaths = Directory.GetFiles(selectedDirectory);
+                // loading images from images paths
+                LoadImagesFromFolder(imagePaths);
+
+                // initializing images list
+                ImageList images = new ImageList();
+                images.ImageSize = new Size(130, 40);
+
+
+                foreach (var image in LoadedImages)
+                {
+                    images.Images.Add(image);
+                }
+
+                // setting our listview with the imagelist
+                imageList.LargeImageList = images;
+
+                for (int itemIndex = 1; itemIndex <= LoadedImages.Count; itemIndex++)
+                {
+                    imageList.Items.Add(new ListViewItem($"Image {itemIndex}", itemIndex - 1));
+                }
             }
         }
     }
