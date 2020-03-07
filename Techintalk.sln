@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2042
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29521.150
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlConAdo", "SqlServerAdoSession\SqlConAdo\SqlConAdo.csproj", "{E9538D22-E8A3-4283-B2CE-38A390551727}"
 EndProject
@@ -28,6 +28,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "WindowForms\Calculator\Calculator.csproj", "{6D15473E-7BB8-41DC-B547-476A3AB6BAD9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageListDemo", "WindowForms\ImageList\ImageListDemo\ImageListDemo.csproj", "{C24DDA88-0C3A-4C79-BC29-53D53BA90E89}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SettingsDemo", "Console\SettingsDemo\SettingsDemo.csproj", "{26D9B5E9-FCBE-4FC0-9196-12E6D160F020}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnMiddlewares", "Web\LearnMiddlewares\LearnMiddlewares.csproj", "{EB8A12E5-BA1B-4E86-856D-635744AFB056}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +75,14 @@ Global
 		{C24DDA88-0C3A-4C79-BC29-53D53BA90E89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C24DDA88-0C3A-4C79-BC29-53D53BA90E89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C24DDA88-0C3A-4C79-BC29-53D53BA90E89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26D9B5E9-FCBE-4FC0-9196-12E6D160F020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26D9B5E9-FCBE-4FC0-9196-12E6D160F020}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26D9B5E9-FCBE-4FC0-9196-12E6D160F020}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26D9B5E9-FCBE-4FC0-9196-12E6D160F020}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB8A12E5-BA1B-4E86-856D-635744AFB056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB8A12E5-BA1B-4E86-856D-635744AFB056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB8A12E5-BA1B-4E86-856D-635744AFB056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB8A12E5-BA1B-4E86-856D-635744AFB056}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,6 +95,8 @@ Global
 		{7FFA3737-1CE0-4B83-84A4-D29AD2AF8E43} = {9A2135DA-D817-451F-A250-94462496F810}
 		{6D15473E-7BB8-41DC-B547-476A3AB6BAD9} = {070521B2-F261-40B1-B0CD-95A852F0DC50}
 		{C24DDA88-0C3A-4C79-BC29-53D53BA90E89} = {070521B2-F261-40B1-B0CD-95A852F0DC50}
+		{26D9B5E9-FCBE-4FC0-9196-12E6D160F020} = {9A2135DA-D817-451F-A250-94462496F810}
+		{EB8A12E5-BA1B-4E86-856D-635744AFB056} = {3840FC52-8825-4597-9103-A1397DE0F0CA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A1BD2B9A-ADA2-4F16-A6F5-54445D9011D4}
