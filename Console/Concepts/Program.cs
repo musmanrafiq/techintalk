@@ -7,9 +7,12 @@ namespace Concepts
     {
         static void Main()
         {
+            // in catch block
+            // in swith statements
+            // swith expression
             var example1 = new WhenExample1();
-            var reslt = example1.GetStringLength(1);
-            Console.WriteLine(reslt);
+            var returnValue = example1.ProcessInput(9);
+            Console.WriteLine(returnValue);
             Console.ReadKey();
         }
     }
