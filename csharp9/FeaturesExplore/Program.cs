@@ -1,4 +1,4 @@
-﻿using FeaturesExplore.Records;
+﻿using FeaturesExplore.InitOnly;
 using System;
 
 namespace FeaturesExplore
@@ -8,12 +8,10 @@ namespace FeaturesExplore
         static void Main(string[] args)
         {
 
-            Employee e = new Employee("e")
-            {
-                FullName = "test"
-            };
-            Employee ee = e with { FullName = "T" };
-            Console.WriteLine(ee.FullName);
+            var student = new Student { Fee = 10 };
+            student.Fee = 50;
+
+            Console.WriteLine(student.Fee);
         }
     }
 }
