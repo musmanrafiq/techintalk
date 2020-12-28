@@ -1,8 +1,7 @@
 ﻿using Concepts.SerializationDeserialization;
 using System;
 using System.IO;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml.Serialization;
 
 namespace Concepts
 {
@@ -19,12 +18,12 @@ namespace Concepts
 
             // serialization
             var userModel = new UserModel { Id = 1, Name = "Usman" };
-            IFormatter formatter = new BinaryFormatter();
-            var stream = new FileStream("userinfo.txt", FileMode.Create, FileAccess.Write);
+            var formatter = new XmlSerializer(typeof(UserModel));
+            var stream = new FileStream("userinfo.xml", FileMode.Create, FileAccess.Write);
             formatter.Serialize(stream, userModel);
             stream.Close();
 
-            var readStream = new FileStream("userinfo.txt", FileMode.Open, FileAccess.Read);
+            var readStream = new FileStream("userinfo.xml", FileMode.Open, FileAccess.Read);
             UserModel model = (UserModel)formatter.Deserialize(readStream);
 
 
