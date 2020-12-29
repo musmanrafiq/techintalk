@@ -38,6 +38,12 @@ namespace EfCore5Features
                 {
                     Console.WriteLine($"{result.Name}");
                 }
+
+                var results1 = await context.Students.Where(x => x.StudentCourses.Any(sc => sc.Course.Title == "Second")).ToListAsync();
+                foreach (var result in results1)
+                {
+                    Console.WriteLine($"{result.Name}");
+                }
             }
 
             Console.WriteLine("End of program");
