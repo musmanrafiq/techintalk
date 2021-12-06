@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29521.150
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlConAdo", "SqlServerAdoSession\SqlConAdo\SqlConAdo.csproj", "{E9538D22-E8A3-4283-B2CE-38A390551727}"
 EndProject
@@ -52,6 +52,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Background Services", "Background Services", "{FE8193E3-280B-4BBD-88E3-AEDF42756537}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsService", "Background Services\WindowsService\WindowsService.csproj", "{1086DEAF-AFAA-4117-9BEF-20FFEA14FA09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csharp10", "csharp10", "{51D5AF6C-9005-43B2-A15B-22910DE644C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "csharp10\ConsoleApp\ConsoleApp.csproj", "{11073E78-A27C-4998-BEFC-ACDED7490E33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -127,6 +131,10 @@ Global
 		{1086DEAF-AFAA-4117-9BEF-20FFEA14FA09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1086DEAF-AFAA-4117-9BEF-20FFEA14FA09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1086DEAF-AFAA-4117-9BEF-20FFEA14FA09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11073E78-A27C-4998-BEFC-ACDED7490E33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11073E78-A27C-4998-BEFC-ACDED7490E33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11073E78-A27C-4998-BEFC-ACDED7490E33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11073E78-A27C-4998-BEFC-ACDED7490E33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -147,6 +155,7 @@ Global
 		{B8D80344-35CD-42CF-8039-56E51F97E57F} = {F8E87DC1-51B6-4A0C-A9C0-4AE247DDE7C8}
 		{401F8E0A-0F80-476B-826A-931FF01F0FEA} = {001003E8-D9F9-4FBB-BFE1-8A40E25CCC6B}
 		{1086DEAF-AFAA-4117-9BEF-20FFEA14FA09} = {FE8193E3-280B-4BBD-88E3-AEDF42756537}
+		{11073E78-A27C-4998-BEFC-ACDED7490E33} = {51D5AF6C-9005-43B2-A15B-22910DE644C2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A1BD2B9A-ADA2-4F16-A6F5-54445D9011D4}
