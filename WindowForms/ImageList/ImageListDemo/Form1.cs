@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
 
@@ -108,6 +109,11 @@ namespace ImageListDemo
                     imageList.Items.Add(new ListViewItem($"Image {itemIndex}", itemIndex - 1));
                 }
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            selectedImage?.Image?.Save(@"E://test.png", ImageFormat.Png);
         }
     }
 }

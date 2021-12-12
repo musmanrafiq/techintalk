@@ -37,6 +37,7 @@
             this.selectDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.selectedImage)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -44,18 +45,20 @@
             // imageList
             // 
             this.imageList.HideSelection = false;
-            this.imageList.Location = new System.Drawing.Point(12, 27);
+            this.imageList.Location = new System.Drawing.Point(16, 33);
+            this.imageList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.imageList.Name = "imageList";
-            this.imageList.Size = new System.Drawing.Size(170, 411);
+            this.imageList.Size = new System.Drawing.Size(225, 505);
             this.imageList.TabIndex = 0;
             this.imageList.UseCompatibleStateImageBehavior = false;
             this.imageList.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.imageList_ItemSelectionChanged);
             // 
             // selectedImage
             // 
-            this.selectedImage.Location = new System.Drawing.Point(198, 27);
+            this.selectedImage.Location = new System.Drawing.Point(264, 33);
+            this.selectedImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.selectedImage.Name = "selectedImage";
-            this.selectedImage.Size = new System.Drawing.Size(453, 349);
+            this.selectedImage.Size = new System.Drawing.Size(604, 430);
             this.selectedImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.selectedImage.TabIndex = 1;
             this.selectedImage.TabStop = false;
@@ -68,11 +71,12 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(663, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(884, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -81,21 +85,22 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.selectDirectoryToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // selectDirectoryToolStripMenuItem
             // 
             this.selectDirectoryToolStripMenuItem.Name = "selectDirectoryToolStripMenuItem";
-            this.selectDirectoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.selectDirectoryToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
             this.selectDirectoryToolStripMenuItem.Text = "Select Directory";
             this.selectDirectoryToolStripMenuItem.Click += new System.EventHandler(this.selectDirectoryToolStripMenuItem_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(298, 397);
+            this.button1.Location = new System.Drawing.Point(264, 488);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(62, 41);
+            this.button1.Size = new System.Drawing.Size(83, 50);
             this.button1.TabIndex = 3;
             this.button1.Text = "Previous";
             this.button1.UseVisualStyleBackColor = true;
@@ -103,25 +108,38 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(488, 397);
+            this.button2.Location = new System.Drawing.Point(378, 488);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(62, 41);
+            this.button2.Size = new System.Drawing.Size(83, 50);
             this.button2.TabIndex = 4;
             this.button2.Text = "Next";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button_navigation);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(726, 489);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(142, 49);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Save As Png";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 450);
+            this.ClientSize = new System.Drawing.Size(884, 554);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.selectedImage);
             this.Controls.Add(this.imageList);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.selectedImage)).EndInit();
@@ -142,6 +160,7 @@
         private System.Windows.Forms.ToolStripMenuItem selectDirectoryToolStripMenuItem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 
