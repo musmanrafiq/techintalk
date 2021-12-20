@@ -113,7 +113,16 @@ namespace ImageListDemo
 
         private void button3_Click(object sender, EventArgs e)
         {
-            selectedImage?.Image?.Save(@"E://test.png", ImageFormat.Png);
+            // downloads directy name
+            const string directoryName = "Downloads";
+
+            // downloads directy exists
+            Directory.CreateDirectory(directoryName);
+
+            // creating dynamic image name
+            var imageName = Guid.NewGuid().ToString();
+
+            selectedImage?.Image?.Save($@"{directoryName}/{imageName}.png", ImageFormat.Png);
         }
     }
 }
