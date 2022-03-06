@@ -7,13 +7,13 @@ using System.Windows.Forms;
 
 namespace ImageListDemo
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         // selected image index, from the listview
         private int SelectedImageIndex = 0;
         private List<Image> LoadedImages { get; set; }
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -80,9 +80,33 @@ namespace ImageListDemo
         }
 
         private void selectDirectoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {            
+           LoadFiles();            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // downloads directy name
+            const string directoryName = "Downloads";
+
+            // downloads directy exists
+            Directory.CreateDirectory(directoryName);
+
+            // creating dynamic image name
+            var imageName = Guid.NewGuid().ToString();
+
+            selectedImage?.Image?.Save($@"{directoryName}/{imageName}.png", ImageFormat.Png);
+        }
+
+        private void openDirectoryBtn_Click(object sender, EventArgs e)
+        {
+            LoadFiles();
+        }
+
+        private void LoadFiles()
         {
             FolderBrowserDialog folderBrowser = new FolderBrowserDialog();
-            if(folderBrowser.ShowDialog() == DialogResult.OK)
+            if (folderBrowser.ShowDialog() == DialogResult.OK)
             {
                 // selected directory
                 var selectedDirectory = folderBrowser.SelectedPath;
@@ -108,21 +132,19 @@ namespace ImageListDemo
                 {
                     imageList.Items.Add(new ListViewItem($"Image {itemIndex}", itemIndex - 1));
                 }
+
+                if(imageList.Items.Count > 0)
+                {
+                    imageList.Visible = true;
+                    selectedImage.Visible = true;
+                    button1.Visible = true;
+                    button2.Visible = true;
+                    button3.Visible = true;
+                    panel1.Visible = false;
+                    imageList.Items[0].Selected = true;
+                    menuStrip1.Visible = true;
+                }
             }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            // downloads directy name
-            const string directoryName = "Downloads";
-
-            // downloads directy exists
-            Directory.CreateDirectory(directoryName);
-
-            // creating dynamic image name
-            var imageName = Guid.NewGuid().ToString();
-
-            selectedImage?.Image?.Save($@"{directoryName}/{imageName}.png", ImageFormat.Png);
         }
     }
 }

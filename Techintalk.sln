@@ -27,7 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WindowForms", "WindowForms"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "WindowForms\Calculator\Calculator.csproj", "{6D15473E-7BB8-41DC-B547-476A3AB6BAD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageListDemo", "WindowForms\ImageList\ImageListDemo\ImageListDemo.csproj", "{C24DDA88-0C3A-4C79-BC29-53D53BA90E89}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GallaryApp", "WindowForms\ImageList\ImageListDemo\GallaryApp.csproj", "{C24DDA88-0C3A-4C79-BC29-53D53BA90E89}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SettingsDemo", "Console\SettingsDemo\SettingsDemo.csproj", "{26D9B5E9-FCBE-4FC0-9196-12E6D160F020}"
 EndProject
@@ -61,7 +61,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DatabaseAccess", "DatabaseA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConsoleApp", "ConsoleApp", "{F0E2AB18-1BA4-44FA-922E-8FFA6EE70FBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp.Dapper", "DatabaseAccess\ConsoleApp\ConsoleApp.Dapper\ConsoleApp.Dapper.csproj", "{51C16D03-1E10-406D-95FC-886AAF83E4E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp.Dapper", "DatabaseAccess\ConsoleApp\ConsoleApp.Dapper\ConsoleApp.Dapper.csproj", "{51C16D03-1E10-406D-95FC-886AAF83E4E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
