@@ -81,8 +81,37 @@ namespace ImageListDemo
 
         private void selectDirectoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.LoadDirectory();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // downloads directy name
+            const string directoryName = "Downloads";
+
+            // downloads directy exists
+            Directory.CreateDirectory(directoryName);
+
+            // creating dynamic image name
+            var imageName = Guid.NewGuid().ToString();
+
+            selectedImage?.Image?.Save($@"{directoryName}/{imageName}.png", ImageFormat.Png);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.LoadDirectory();
+        }
+
+        private void LoadDirectory()
+        {
             FolderBrowserDialog folderBrowser = new FolderBrowserDialog();
-            if(folderBrowser.ShowDialog() == DialogResult.OK)
+            if (folderBrowser.ShowDialog() == DialogResult.OK)
             {
                 // selected directory
                 var selectedDirectory = folderBrowser.SelectedPath;
@@ -101,6 +130,18 @@ namespace ImageListDemo
                     images.Images.Add(image);
                 }
 
+                // double check we have some images selected
+                if(images.Images.Count > 0)
+                {
+                    imageList.Visible = true;
+                    selectedImage.Visible = true;
+                    nextBtn.Visible = true;
+                    previousBtn.Visible = true;
+                    saveAsBtn.Visible = true;
+                    menuStrip1.Visible = true;
+                    selectDirectoryBtn.Visible = false;
+
+                }
                 // setting our listview with the imagelist
                 imageList.LargeImageList = images;
 
@@ -109,20 +150,6 @@ namespace ImageListDemo
                     imageList.Items.Add(new ListViewItem($"Image {itemIndex}", itemIndex - 1));
                 }
             }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            // downloads directy name
-            const string directoryName = "Downloads";
-
-            // downloads directy exists
-            Directory.CreateDirectory(directoryName);
-
-            // creating dynamic image name
-            var imageName = Guid.NewGuid().ToString();
-
-            selectedImage?.Image?.Save($@"{directoryName}/{imageName}.png", ImageFormat.Png);
         }
     }
 }
