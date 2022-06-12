@@ -351,3 +351,4 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+Web/HostedApplication/Properties/ServiceDependencies/techintalk - Web Deploy/profile.arm.json
