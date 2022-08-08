@@ -1,0 +1,36 @@
+﻿.NET
+- free
+- cross-platform
+- open-source
+- developer platform
+- many languages
+- build web, desktop, mobile, game and IoT applications
+
+CLR
+- Common language runtime
+- runs the code
+- provide services for development process
+
+C#
+- Language by Microsoft, runs on dotnet framework
+- Typesafe, object oriented and modern
+
+Console project
+
+Concepts
+- namespaces
+- classes
+- functions
+- variables with types
+- console text, user input
+
+Conditions
+- if 
+- if else
+
+Loops
+- for
+- while
+- dowhile
+
+Complete application

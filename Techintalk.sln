@@ -65,9 +65,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp.Dapper", "Databa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotNet6", "DotNet6", "{A5A0CD6F-CAC2-498F-BEB4-6EC130D697B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet6_API", "DotNet6\DotNet6_API\DotNet6_API.csproj", "{CBE20E36-F14F-4B75-B595-8BC5D4782C27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNet6_API", "DotNet6\DotNet6_API\DotNet6_API.csproj", "{CBE20E36-F14F-4B75-B595-8BC5D4782C27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostedApplication", "Web\HostedApplication\HostedApplication.csproj", "{26B9C2BF-1739-4AB0-BBBF-02ECE4413368}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HostedApplication", "Web\HostedApplication\HostedApplication.csproj", "{26B9C2BF-1739-4AB0-BBBF-02ECE4413368}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpCrashCourse", "Console\CSharpCrashCourse\CSharpCrashCourse.csproj", "{401BC86A-D5EF-4923-8075-0E95062AA786}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -159,6 +161,10 @@ Global
 		{26B9C2BF-1739-4AB0-BBBF-02ECE4413368}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26B9C2BF-1739-4AB0-BBBF-02ECE4413368}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26B9C2BF-1739-4AB0-BBBF-02ECE4413368}.Release|Any CPU.Build.0 = Release|Any CPU
+		{401BC86A-D5EF-4923-8075-0E95062AA786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{401BC86A-D5EF-4923-8075-0E95062AA786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{401BC86A-D5EF-4923-8075-0E95062AA786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{401BC86A-D5EF-4923-8075-0E95062AA786}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -184,6 +190,7 @@ Global
 		{51C16D03-1E10-406D-95FC-886AAF83E4E1} = {F0E2AB18-1BA4-44FA-922E-8FFA6EE70FBD}
 		{CBE20E36-F14F-4B75-B595-8BC5D4782C27} = {A5A0CD6F-CAC2-498F-BEB4-6EC130D697B8}
 		{26B9C2BF-1739-4AB0-BBBF-02ECE4413368} = {3840FC52-8825-4597-9103-A1397DE0F0CA}
+		{401BC86A-D5EF-4923-8075-0E95062AA786} = {9A2135DA-D817-451F-A250-94462496F810}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A1BD2B9A-ADA2-4F16-A6F5-54445D9011D4}
