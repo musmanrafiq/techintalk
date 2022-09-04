@@ -71,6 +71,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HostedApplication", "Web\Ho
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpCrashCourse", "Console\CSharpCrashCourse\CSharpCrashCourse.csproj", "{401BC86A-D5EF-4923-8075-0E95062AA786}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csharp11", "csharp11", "{094034DB-42DB-4859-B66D-3B5D32B73CCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleExample", "csharp11\ConsoleExample\ConsoleExample.csproj", "{52F46E5A-6316-4660-BCC7-B332679E820F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +169,10 @@ Global
 		{401BC86A-D5EF-4923-8075-0E95062AA786}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{401BC86A-D5EF-4923-8075-0E95062AA786}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{401BC86A-D5EF-4923-8075-0E95062AA786}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52F46E5A-6316-4660-BCC7-B332679E820F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52F46E5A-6316-4660-BCC7-B332679E820F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52F46E5A-6316-4660-BCC7-B332679E820F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52F46E5A-6316-4660-BCC7-B332679E820F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -191,6 +199,7 @@ Global
 		{CBE20E36-F14F-4B75-B595-8BC5D4782C27} = {A5A0CD6F-CAC2-498F-BEB4-6EC130D697B8}
 		{26B9C2BF-1739-4AB0-BBBF-02ECE4413368} = {3840FC52-8825-4597-9103-A1397DE0F0CA}
 		{401BC86A-D5EF-4923-8075-0E95062AA786} = {9A2135DA-D817-451F-A250-94462496F810}
+		{52F46E5A-6316-4660-BCC7-B332679E820F} = {094034DB-42DB-4859-B66D-3B5D32B73CCB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A1BD2B9A-ADA2-4F16-A6F5-54445D9011D4}
