@@ -77,7 +77,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleExample", "csharp11\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CliTools", "CliTools", "{7D11AD73-26CB-4FA8-929F-434CAFE3BB7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordGenerator", "CliTools\PasswordGenerator\PasswordGenerator.csproj", "{C0A7A1DE-A9CC-4BA1-A39A-2969570275E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PasswordGenerator", "CliTools\PasswordGenerator\PasswordGenerator.csproj", "{C0A7A1DE-A9CC-4BA1-A39A-2969570275E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LanguageFeatures", "LanguageFeatures", "{99177CF3-96E4-4498-9D04-D059AA7ECF6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "LanguageFeatures\ConsoleApp1\ConsoleApp1.csproj", "{366BB513-8D37-45EF-AEC3-21D3932B9E02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -181,6 +185,10 @@ Global
 		{C0A7A1DE-A9CC-4BA1-A39A-2969570275E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0A7A1DE-A9CC-4BA1-A39A-2969570275E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0A7A1DE-A9CC-4BA1-A39A-2969570275E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{366BB513-8D37-45EF-AEC3-21D3932B9E02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{366BB513-8D37-45EF-AEC3-21D3932B9E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{366BB513-8D37-45EF-AEC3-21D3932B9E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{366BB513-8D37-45EF-AEC3-21D3932B9E02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -209,6 +217,7 @@ Global
 		{401BC86A-D5EF-4923-8075-0E95062AA786} = {9A2135DA-D817-451F-A250-94462496F810}
 		{52F46E5A-6316-4660-BCC7-B332679E820F} = {094034DB-42DB-4859-B66D-3B5D32B73CCB}
 		{C0A7A1DE-A9CC-4BA1-A39A-2969570275E7} = {7D11AD73-26CB-4FA8-929F-434CAFE3BB7D}
+		{366BB513-8D37-45EF-AEC3-21D3932B9E02} = {99177CF3-96E4-4498-9D04-D059AA7ECF6C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A1BD2B9A-ADA2-4F16-A6F5-54445D9011D4}
